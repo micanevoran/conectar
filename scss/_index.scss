@@ -1,24 +1,24 @@
 .structure_index_header{
     img{
-        opacity: 0.65;
+        filter: brightness(40%);
     }
     h2{
         font-family: $titleFont;
-        @include font-size(1rem,1rem,3rem);
+        @include font-size(0.9rem,1rem,3rem);
         font-weight: $textBold;
         color:map-get($map:$palette, $key:'white');
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(255, 255, 255, 0.5);
     }
     h3{
         font-family: $titleFont;
-        @include font-size(0.8rem,0.8rem,2rem);
+        @include font-size(0.7rem,0.8rem,2rem);
         font-weight: $textRegular;
         color:map-get($map:$palette, $key:'white');
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 1), -1px -1px 2px rgba(255, 255, 255, 0.5);
     }
     p{
         font-family: $mainFont;
-        @include font-size(0.7rem,0.7rem,1.3rem);
+        @include font-size(0.6rem,0.7rem,1.3rem);
         font-weight: $textLight;
         color:map-get($map:$palette, $key:'white');
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(255, 255, 255, 0.5);
@@ -36,13 +36,26 @@
     }
 }
 .structure_index_main{
-    font-family: $mainFont;
-    @include font-size(1rem,1.1rem,1.3rem);
-    text-align: justify;
-    padding-right: 5vw;
-    padding-left: 4vw;
-    @include medias(desktop){
-        padding-right: 6vw;
-        padding-left: 6vw;
+    width: 90%;
+    padding: 2vw 1vh;
+
+    h2{
+        padding-top: 2vh ;
+        padding-bottom: 3vh ;
+        font-family: $titleFont;
+        font-weight: $textBold;
+        @include font-size(0.9rem,1rem,1.2rem);
+    }
+    p{
+        font-family: $mainFont;
+        @include font-size(0.8rem,0.9rem,1.1rem);
+        text-align: justify;
+        line-height: 1.5;
+        padding-right: 5vw;
+        padding-left: 4vw;
+        @include medias(desktop){
+            padding-right: 6vw;
+            padding-left: 6vw;
+        }
     }
 }

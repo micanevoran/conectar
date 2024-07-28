@@ -266,7 +266,7 @@ a {
 }
 
 .structure_index_header img {
-  opacity: 0.65;
+  filter: brightness(40%);
 }
 .structure_index_header h2 {
   font-family: "Inter", sans-serif;
@@ -276,7 +276,7 @@ a {
 }
 @media (min-width: 320px) {
   .structure_index_header h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 768px) {
@@ -297,7 +297,7 @@ a {
 }
 @media (min-width: 320px) {
   .structure_index_header h3 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 @media (min-width: 768px) {
@@ -318,7 +318,7 @@ a {
 }
 @media (min-width: 320px) {
   .structure_index_header p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 @media (min-width: 768px) {
@@ -344,28 +344,54 @@ a {
 }
 
 .structure_index_main {
+  width: 90%;
+  padding: 2vw 1vh;
+}
+.structure_index_main h2 {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+@media (min-width: 320px) {
+  .structure_index_main h2 {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure_index_main h2 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_main h2 {
+    font-size: 1.2rem;
+  }
+}
+.structure_index_main p {
   font-family: "Montserrat", sans-serif;
   text-align: justify;
+  line-height: 1.5;
   padding-right: 5vw;
   padding-left: 4vw;
 }
 @media (min-width: 320px) {
-  .structure_index_main {
-    font-size: 1rem;
+  .structure_index_main p {
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 768px) {
-  .structure_index_main {
+  .structure_index_main p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_main p {
     font-size: 1.1rem;
   }
 }
 @media (min-width: 1024px) {
-  .structure_index_main {
-    font-size: 1.3rem;
-  }
-}
-@media (min-width: 1024px) {
-  .structure_index_main {
+  .structure_index_main p {
     padding-right: 6vw;
     padding-left: 6vw;
   }
@@ -834,6 +860,10 @@ a {
   }
 }
 
+.card {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
 @media (min-width: 1024px) {
   .card {
     margin-top: 1vh;
