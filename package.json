@@ -1,0 +1,21 @@
+{
+  "name": "web-conectar",
+  "version": "1.0.0",
+  "description": "Web Conectar - Equipo de Evaluación Integral",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass:watch": "sass --watch scss/style.scss  css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micanevoran/SOLENA.git"
+  },
+  "author": "Ana Micaela Nevoran",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.8"
+  }
+}

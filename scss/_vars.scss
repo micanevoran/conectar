@@ -1,0 +1,16 @@
+//colors
+$palette:(
+    'white': #ffff,
+    'aqua': #b3dfdc,
+    'green': #bccda0,
+    'light-grey': #d7e1d8,
+    'medium-grey': #d0d7cb,
+    'dark-grey': #79807c
+);
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+$titleFont: 'Inter', sans-serif;
+$mainFont: 'Montserrat', sans-serif;
+$textBold: 700;
+$textRegular: 400;
+$textLight: 300;

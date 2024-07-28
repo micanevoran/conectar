@@ -1,0 +1,73 @@
+.structure__como_empezar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "CEimg"
+    "CEprocess";
+    justify-items: center;
+    align-items: center;
+    h2{
+        @include font-size(1.2rem, 1.3rem, 1.4rem);
+    }
+    #CE-img{
+        grid-area: CEimg;
+        width: 100% ;
+        height: auto;
+        .imgDsk {
+            display: none;
+            @include medias (desktop){
+                display:block;
+                width: 90%;
+                height: auto;
+                margin-left: 3vw;
+            }
+        }
+        .imgPh {
+            display: block;
+            width: 100%;
+            height: auto;
+            @include medias (desktop){
+                display:none;
+            }
+        }
+    }
+    #CE-process{
+        grid-area: CEprocess;
+        width: 100%;
+        padding-right: 7vw;
+        padding-left: 3vw;
+        padding-top: 5vh;
+        h3{
+            @include font-size (0.9rem, 1rem, 1.1rem);
+            text-align: left;
+            font-family: $mainFont;
+            margin-bottom: 4vh;
+            line-height: 1.7rem;
+        }
+        .CE-box{
+            h4{
+                @include font-size (0.9rem, 1rem, 1.1rem);
+                text-align:left;
+                font-family: $titleFont;
+                font-weight: $textBold;
+                img {
+                    filter: invert(52%) sepia(6%) saturate(284%) hue-rotate(93deg) brightness(94%) contrast(87%);
+                }
+            }
+            p{
+                @include font-size (0.8rem, 0.9rem, 1rem);
+                line-height: 1.5rem; 
+                font-family: $mainFont;
+                padding-bottom:2vh;
+                text-align: justify;
+            }
+        }
+    }
+    @include medias(desktop){
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "CEimg CEprocess"
+    }
+}

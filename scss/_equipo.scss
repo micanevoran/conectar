@@ -1,0 +1,163 @@
+.container_agus{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "agusimg"
+    "agustext";
+    justify-items: center;
+    align-items: center;
+    h2{
+        @include font-size(1.4rem, 1.4rem, 1.6rem);
+        margin-bottom: 1rem;
+        font-family: $titleFont;
+        font-weight: $textBold;
+    }
+    h3{
+        @include font-size(1.3rem, 1.3rem, 1.5rem);
+        margin-bottom: 1.5rem;
+        font-family: $titleFont;
+    }
+    p{
+        @include font-size(1.2rem, 1.2rem, 1.4rem);
+        text-align: justify;
+        font-family: $mainFont;
+    }
+    li{
+        @include font-size(1rem, 1rem, 1rem);
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-family: $mainFont;
+        color: map-get($map:$palette, $key:'dark-grey')
+    }
+    #AgusImg{
+        grid-area: agusimg;
+        width: 80%;
+        height: auto;
+        @include medias (desktop){
+            width: 90%;
+            height: auto;
+            margin-left: 5vw;
+        }
+    }
+    #AgusText{
+        grid-area: agustext;
+        width: 90%;
+        max-width: 700px;
+    }
+    @include medias (desktop){
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "agusimg agustext"
+    }
+}
+.container_male{
+    background-color:map-get($map:$palette, $key:'light-grey') ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "maleimg"
+    "maletext";
+    justify-items: center;
+    align-items: center;
+    h2{
+        @include font-size(1.4rem, 1.4rem, 1.6rem);
+        margin-bottom: 1rem;
+        font-family: $titleFont;
+        font-weight: $textBold;
+    }
+    h3{
+        @include font-size(1.3rem, 1.3rem, 1.5rem);
+        margin-bottom: 1.5rem;
+        font-family: $titleFont;
+    }
+    p{
+        @include font-size(1.2rem, 1.2rem, 1.4rem);
+        text-align: justify;
+        font-family: $mainFont;
+    }
+    li{
+        @include font-size(1rem, 1rem, 1rem);
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-family: $mainFont;
+        color: map-get($map:$palette, $key:'dark-grey')
+    }
+    #MaleText{
+        grid-area: maletext;
+        width: 90%;
+        max-width: 700px;
+    }
+    #MaleImg{
+        grid-area: maleimg;
+        width: 80%;
+        height: auto;
+        @include medias (desktop){
+            width: 90%;
+            height: auto;
+            margin-right: 5vw;
+        }
+    }
+    @include medias (desktop){
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "maletext maleimg"
+    }
+}
+.container_bel{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "belimg"
+    "beltext";
+    justify-items: center;
+    align-items: center;
+    h2{
+        @include font-size(1.4rem, 1.4rem, 1.6rem);
+        margin-bottom: 1rem;
+        font-family: $titleFont;
+        font-weight: $textBold;
+    }
+    h3{
+        @include font-size(1.3rem, 1.3rem, 1.5rem);
+        margin-bottom: 1.5rem;
+        font-family: $titleFont;
+    }
+    p{
+        @include font-size(1.2rem, 1.2rem, 1.4rem);
+        text-align: justify;
+        font-family: $mainFont;
+    }
+    li{
+        @include font-size(1rem, 1rem, 1rem);
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-family: $mainFont;
+        color: map-get($map:$palette, $key:'dark-grey')
+    }
+    #BelImg{
+        grid-area: belimg;
+        width: 80%;
+        height: auto;
+        @include medias (desktop){
+            width: 90%;
+            height: auto;
+            margin-left: 5vw;
+        }
+    }
+    #BelText{
+        grid-area: beltext;
+        width: 90%;
+        max-width: 700px;
+    }
+    @include medias (desktop){
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "belimg beltext"
+    }
+}

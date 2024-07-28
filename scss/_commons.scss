@@ -1,0 +1,197 @@
+//mixins
+@mixin medias ($breakpoint){
+    @if $breakpoint == mobile{
+        @media (min-width: 320px){
+            @content;
+        }
+    }
+    @if $breakpoint == tablet{
+        @media (min-width: 768px){
+            @content;
+        }
+    }
+    @if $breakpoint == desktop{
+        @media (min-width: 1024px){
+            @content;
+        }
+    }
+}
+@mixin display-flex ($direction, $justify-content, $align-items){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin font-size ($fs1, $fs2, $fs3){
+    @include medias (mobile){
+        font-size: $fs1;
+    }
+    @include medias (tablet){
+        font-size: $fs2;
+    }
+    @include medias (desktop){
+        font-size: $fs3;
+    }
+}
+
+//botones - clase base
+.button{
+    font-family: $mainFont;
+    color: map-get($map:$palette, $key:'white');
+    font-weight: $textRegular;
+    border-radius: 5px;
+    border: none;
+    background: map-get($map:$palette, $key:'green');
+    &:hover{
+        background: map-get($map:$palette, $key:'green');
+        color: map-get($map:$palette, $key:'dark-grey');
+        cursor: pointer;
+        transition: all .3s;
+    }
+}
+
+html{
+    min-height: 100%;
+    position:relative;
+    body{
+        margin: 0;
+        margin-bottom: 8vh;
+        @include medias(tablet){
+            margin: 0;
+            margin-bottom: 12vh;
+        }
+    }
+}
+
+//Elementos comunes a todas las páginas
+#nav{
+    background-color: map-get($map:$palette, $key:'white');
+    font-family: $titleFont;
+    font-weight: $textBold;
+    padding-right: 2vw;
+    padding-left: 1vw;
+    .nav__logo{
+        height: 9vh;
+        @include medias (tablet){
+            height: 10vh;
+        }
+    }
+    .nav-item{
+        @include font-size(0.8rem,1rem,1rem);
+        font-family: $titleFont;
+        font-weight: $textBold;
+        margin-right: 1vw;
+        &:hover{
+            animation-name: animateNavLinks;
+            animation-duration: 0.5s;
+            background: linear-gradient(to top, map-get($map:$palette, $key:'dark-grey'), map-get($map:$palette, $key:'dark-grey'));
+            background-position: 0 80%; 
+            background-repeat: no-repeat; 
+            color: map-get($map:$palette, $key:'dark-grey');
+            background-size: 100% 2px;
+        }
+        a{
+            color: map-get($map:$palette, $key:'dark-grey');
+        }
+    }
+    .nav-item-sub{
+        @include font-size(0.8rem,1rem,1rem);
+        font-family: $titleFont;
+        font-weight: $textRegular;
+        &:hover{
+            font-weight: $textBold;
+        }
+    }
+}
+@keyframes animateNavLinks{
+    0%{
+        background: linear-gradient(to top, map-get($map:$palette, $key:'green'), map-get($map:$palette, $key:'green')); 
+        background-position: 0 80%; 
+        background-repeat: no-repeat; 
+        background-size: 0% 2px;
+    }
+    100%{
+        background: linear-gradient(to top, map-get($map:$palette, $key:'dark-grey'), map-get($map:$palette, $key:'dark-grey')); 
+        background-position: 0 80%; 
+        background-repeat: no-repeat; 
+        background-size: 100% 2px;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    font-family: $titleFont;
+    font-weight:$textRegular;
+    color:map-get($map:$palette, $key:'dark-grey');
+}
+p{
+    font-family: $mainFont;
+    font-weight:$textLight;
+    color:map-get($map:$palette, $key:'dark-grey');
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    background-color: map-get($map:$palette, $key:'light-grey');
+    @include display-flex(row,center,center);
+    height: 8vh;
+    @include medias(desktop){
+        height: 10vh;
+    }
+    h1{
+        @include font-size(1.2rem,1.5rem,1.5rem);
+        font-family: $titleFont;
+        font-weight: $textBold;
+        color: map-get($map:$palette, $key:'dark-grey');
+    }
+}
+#footer{
+    background-color: map-get($map:$palette, $key:'light-grey');
+    width: 100%;
+    height: 6vh;
+    position:absolute;
+    bottom: 0;
+    @include display-flex(row, center, center);
+    @include medias (tablet){
+        height: 9vh;
+    }
+    .footer__icon{
+        filter: invert(52%) sepia(6%) saturate(284%) hue-rotate(93deg) brightness(94%) contrast(87%);
+        height: 4vh;
+        opacity: 0.8;
+        margin-right: 2vw;
+        &:hover{
+            opacity: 1;
+        }
+        @include medias (tablet){
+            height: 6vh;
+        }
+    }
+}
+#error{
+    height: 80vh;
+    @include display-flex(column, start, center);
+    img{
+        width: 65vw;
+        max-width: 320px;
+    }
+    h1{
+        margin-top: 2vh;
+        @include font-size(1.2rem, 1.5rem, 1.5rem);
+    }
+    h2{
+        @include font-size(1rem, 1.3rem, 1.3rem);
+    }     
+    .error__text{
+        font-family: $mainFont;
+        color: map-get($map:$palette, $key:'dark-grey');
+        font-weight: $textBold;
+    }
+    .error__button{
+        @extend .button;
+        @include font-size(1rem, 1.3rem, 1.3rem);
+        padding: 1vh 1vw;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+    }
+}

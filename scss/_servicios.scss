@@ -1,0 +1,60 @@
+.structure_servicios{
+    @include display-flex (column, center, center);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    @include medias(desktop){
+        @include display-flex (row, center, center);
+    }
+}
+.card{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    @include medias(desktop){
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+}
+.title_card_serv{
+    text-align: center;
+    @include font-size (1.2rem, 1.2rem, 1.4rem);
+    font-family: $titleFont;
+    font-weight:$textRegular;
+    color:map-get($map:$palette, $key:'dark-grey');
+}
+.title_serv{
+    text-align: center;
+    @include font-size (1.1rem, 1.3rem, 1.5rem);
+    font-family: $titleFont;
+    font-weight:$textBold;
+    color:map-get($map:$palette, $key:'dark-grey');
+}
+.acc_title{
+    font-family: $mainFont;
+    @include font-size (1rem, 1.2rem, 1.3rem);
+    color: map-get($map:$palette, $key:'dark-grey');
+}
+.acc_body{
+    font-family: $mainFont;
+    text-align: left;
+    @include font-size (1rem, 1rem, 1rem)
+}
+.btn-sec{
+    font-family: $mainFont;
+    color: map-get($map:$palette, $key:'dark-grey');
+    background-color: none;
+    border-radius: 5px;
+    border: .05em solid map-get($map:$palette, $key:'medium-grey');
+    &:hover{
+        border: .05em solid map-get($map:$palette, $key:'dark-grey')
+    }
+}
+.link-contacto{
+    color: map-get($map:$palette, $key:'white');
+    text-decoration: none;
+    &:hover{
+        background: map-get($map:$palette, $key:'green');
+        color: map-get($map:$palette, $key:'dark-grey');
+        cursor: pointer;
+        transition: all .3s;
+    }
+}

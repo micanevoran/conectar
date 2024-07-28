@@ -1,0 +1,75 @@
+.structure__nosotras{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nosimg"
+    "nosotras"
+    "mision"
+    "vision";
+    justify-items: center;
+    align-items: center;
+    h2{
+        @include font-size(1.2rem, 1.3rem, 1.4rem);
+    }
+    p{
+        @include font-size(0.9rem, 1rem, 1.1rem);
+        text-align: justify;
+    }
+    #NosImg{
+        padding-left: 2vw;
+        padding-right: 2vw;
+        grid-area: nosimg;
+        @include display-flex(column,center,center);
+        width: 80% ;
+        height: auto;
+        @include medias (desktop){
+            width: 90%;
+            height: auto;
+            margin-left: 5vw;
+        }
+    }
+    #Nosotras{
+        grid-area: nosotras;
+    }
+    #Mision{
+        grid-area: mision;
+    }
+    #Vision{
+        grid-area: vision;
+    }
+    .nos_img1{
+        width: 95%;
+        height: auto;
+        @include medias (desktop){
+            width: 100%;
+            height: auto;
+            margin-left: 3vw;
+        }
+    }
+    .nos_img2{
+        display:none;
+        @include medias (desktop){
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        @include medias (desktop){
+            width: 100%;
+            height: auto;
+            margin-left: 3vw;
+        }
+    }
+    .nosotras__article{
+        width: 90%;
+        max-width: 700px;
+    }
+    @include medias (desktop){
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nosimg nosotras"
+        "nosimg mision"
+        "nosimg vision";
+    }
+}
