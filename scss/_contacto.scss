@@ -7,6 +7,7 @@
     "datos";
     h3{
         font-family: $titleFont;
+        font-weight: $textBold;
         font-size: 1.3rem;
     }
     #Form{
@@ -14,23 +15,47 @@
         form{
             width: 100%;
             font-family: $mainFont;
-            @include font-size(0.9rem, 1rem, 1rem);
-            font-weight: $textLight;
-            @include display-flex(column, stretch, stretch);
-            label{
-                @include font-size(0.9rem, 1rem, 1rem);
-                color:map-get($map:$palette, $key:'medium-grey');  
+            @include display-flex(column, center, stretch);
+            .form-input{
+                @include font-size (0.9rem, 0.9rem, 0.9rem);
+                color: map-get($map:$palette, $key:'dark-grey');
+            }
+            input::placeholder{
+                color: map-get($map:$palette, $key:'medium-grey')
+            }
+            .motivo-contacto{
+                @include font-size(1rem, 1rem, 1rem);
+                color:map-get($map:$palette, $key:'dark-grey');
+            }
+            .reason{
+                @include font-size(0.9rem, 0.9rem, 0.9rem);
+                color:map-get($map:$palette, $key:'dark-grey')
             }
             legend{
-                @include font-size(0.9rem, 1rem, 1rem);
+                @include font-size(1rem, 1rem, 1rem);
                 font-weight: $textRegular;
                 color:map-get($map:$palette, $key:'dark-grey');
+            }
+            #textArea{
+                @include font-size (0.9rem, 0.9rem, 0.9rem)
+            }
+            #textArea::placeholder{
+                @include font-size (0.9rem, 0.9rem, 0.9rem);
+                color: map-get($map:$palette, $key:'medium-grey');
+                text-wrap:wrap;
             }
             @include medias (tablet){
                 max-width: 600px;
                 margin: 0 auto;
+            }
+            a{
+                color:map-get($map:$palette, $key:'white');
+                &:hover{
+                    color: map-get($map:$palette, $key:'dark-grey');
+                    cursor: pointer;
+                    transition: all .3s;
+                }
             }   
-            .form-control{}
         }
     }    
     #Datos{
@@ -49,11 +74,11 @@
             img{
                 width: 5vw;
                 max-width: 30px;
-                margin-bottom: 0.5vh;
+                filter: invert(52%) sepia(6%) saturate(284%) hue-rotate(93deg) brightness(94%) contrast(87%);
             }
             p{
                 font-family: $mainFont;
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
             @include medias (tablet){
                 flex-direction: row;
@@ -64,6 +89,6 @@
         grid-template-columns: repeat(1,2fr);
         grid-template-areas: 
         "form datos";
-        margin-right: 5vw;
+        margin-right: 8vw;
     }   
 }

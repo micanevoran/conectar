@@ -4,11 +4,10 @@
     padding-bottom: 2vh;
     @include medias(desktop){
         @include display-flex (row, center, center);
+        padding-top: 5vh
     }
 }
 .card{
-    margin-top: 2vh;
-    margin-bottom: 2vh;
     @include medias(desktop){
         margin-top: 1vh;
         margin-bottom: 1vh;

@@ -265,6 +265,112 @@ a {
   }
 }
 
+.structure_index_header img {
+  opacity: 0.65;
+}
+.structure_index_header h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 320px) {
+  .structure_index_header h2 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure_index_header h2 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_header h2 {
+    font-size: 3rem;
+  }
+}
+.structure_index_header h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: white;
+  text-shadow: 3px 3px 6px rgb(0, 0, 0), -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 320px) {
+  .structure_index_header h3 {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure_index_header h3 {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_header h3 {
+    font-size: 2rem;
+  }
+}
+.structure_index_header p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 320px) {
+  .structure_index_header p {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure_index_header p {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_header p {
+    font-size: 1.3rem;
+  }
+}
+.structure_index_header #carouselDsk {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .structure_index_header #carouselDsk {
+    display: block;
+  }
+  .structure_index_header #carouselPh {
+    display: none;
+  }
+}
+
+.structure_index_main {
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  padding-right: 5vw;
+  padding-left: 4vw;
+}
+@media (min-width: 320px) {
+  .structure_index_main {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure_index_main {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_main {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure_index_main {
+    padding-right: 6vw;
+    padding-left: 6vw;
+  }
+}
+
 .structure__nosotras {
   display: grid;
   grid-template-columns: 1fr;
@@ -724,13 +830,10 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 5vh;
   }
 }
 
-.card {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-}
 @media (min-width: 1024px) {
   .card {
     margin-top: 1vh;
@@ -981,6 +1084,7 @@ a {
 }
 .structure__contacto h3 {
   font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 1.3rem;
 }
 .structure__contacto #Form {
@@ -989,43 +1093,66 @@ a {
 .structure__contacto #Form form {
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: stretch;
 }
+.structure__contacto #Form form .form-input {
+  color: #79807c;
+}
 @media (min-width: 320px) {
-  .structure__contacto #Form form {
+  .structure__contacto #Form form .form-input {
     font-size: 0.9rem;
   }
 }
 @media (min-width: 768px) {
-  .structure__contacto #Form form {
-    font-size: 1rem;
+  .structure__contacto #Form form .form-input {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1024px) {
-  .structure__contacto #Form form {
-    font-size: 1rem;
+  .structure__contacto #Form form .form-input {
+    font-size: 0.9rem;
   }
 }
-.structure__contacto #Form form label {
+.structure__contacto #Form form input::placeholder {
   color: #d0d7cb;
 }
+.structure__contacto #Form form .motivo-contacto {
+  color: #79807c;
+}
 @media (min-width: 320px) {
-  .structure__contacto #Form form label {
-    font-size: 0.9rem;
+  .structure__contacto #Form form .motivo-contacto {
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
-  .structure__contacto #Form form label {
+  .structure__contacto #Form form .motivo-contacto {
     font-size: 1rem;
   }
 }
 @media (min-width: 1024px) {
-  .structure__contacto #Form form label {
+  .structure__contacto #Form form .motivo-contacto {
     font-size: 1rem;
+  }
+}
+.structure__contacto #Form form .reason {
+  color: #79807c;
+}
+@media (min-width: 320px) {
+  .structure__contacto #Form form .reason {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure__contacto #Form form .reason {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure__contacto #Form form .reason {
+    font-size: 0.9rem;
   }
 }
 .structure__contacto #Form form legend {
@@ -1034,7 +1161,7 @@ a {
 }
 @media (min-width: 320px) {
   .structure__contacto #Form form legend {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
@@ -1047,11 +1174,53 @@ a {
     font-size: 1rem;
   }
 }
+@media (min-width: 320px) {
+  .structure__contacto #Form form #textArea {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure__contacto #Form form #textArea {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure__contacto #Form form #textArea {
+    font-size: 0.9rem;
+  }
+}
+.structure__contacto #Form form #textArea::placeholder {
+  color: #d0d7cb;
+  text-wrap: wrap;
+}
+@media (min-width: 320px) {
+  .structure__contacto #Form form #textArea::placeholder {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) {
+  .structure__contacto #Form form #textArea::placeholder {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .structure__contacto #Form form #textArea::placeholder {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 768px) {
   .structure__contacto #Form form {
     max-width: 600px;
     margin: 0 auto;
   }
+}
+.structure__contacto #Form form a {
+  color: white;
+}
+.structure__contacto #Form form a:hover {
+  color: #79807c;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .structure__contacto #Datos {
   grid-area: datos;
@@ -1079,11 +1248,11 @@ a {
 .structure__contacto #Datos div img {
   width: 5vw;
   max-width: 30px;
-  margin-bottom: 0.5vh;
+  filter: invert(52%) sepia(6%) saturate(284%) hue-rotate(93deg) brightness(94%) contrast(87%);
 }
 .structure__contacto #Datos div p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .structure__contacto #Datos div {
@@ -1094,7 +1263,7 @@ a {
   .structure__contacto {
     grid-template-columns: repeat(1, 2fr);
     grid-template-areas: "form datos";
-    margin-right: 5vw;
+    margin-right: 8vw;
   }
 }
 

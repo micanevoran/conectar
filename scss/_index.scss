@@ -1,0 +1,48 @@
+.structure_index_header{
+    img{
+        opacity: 0.65;
+    }
+    h2{
+        font-family: $titleFont;
+        @include font-size(1rem,1rem,3rem);
+        font-weight: $textBold;
+        color:map-get($map:$palette, $key:'white');
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(255, 255, 255, 0.5);
+    }
+    h3{
+        font-family: $titleFont;
+        @include font-size(0.8rem,0.8rem,2rem);
+        font-weight: $textRegular;
+        color:map-get($map:$palette, $key:'white');
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 1), -1px -1px 2px rgba(255, 255, 255, 0.5);
+    }
+    p{
+        font-family: $mainFont;
+        @include font-size(0.7rem,0.7rem,1.3rem);
+        font-weight: $textLight;
+        color:map-get($map:$palette, $key:'white');
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(255, 255, 255, 0.5);
+    }  
+    #carouselDsk{
+        display: none;
+    }
+    @include medias(desktop){
+        #carouselDsk{
+            display: block
+        }
+        #carouselPh{
+            display: none;
+        }
+    }
+}
+.structure_index_main{
+    font-family: $mainFont;
+    @include font-size(1rem,1.1rem,1.3rem);
+    text-align: justify;
+    padding-right: 5vw;
+    padding-left: 4vw;
+    @include medias(desktop){
+        padding-right: 6vw;
+        padding-left: 6vw;
+    }
+}

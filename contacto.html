@@ -53,45 +53,44 @@
             <!--Inicio Contenido Principal-->
             <main class="structure__contacto">
                 <section id="Form" class="my-2">
-                    <h3 class="py-3">Dejanos tu mensaje</h3>
+                    <h3 class="pt-3 pb-2">Dejanos tu mensaje</h3>
                     <form action="" class="container-fluid">
-                        <div class="mb-2">
-                            <input type="text" name="nombre" class="form-control" id="name" placeholder="Nombre y Apellido" required>
+                        <div class="mb-1">
+                            <input type="text" name="nombre" class="form-control form-input" id="name" placeholder="Nombre y Apellido" required>
+                        </div>
+                        <div class="mb-1">
+                            <input type="email" name="correo" class="form-control form-input" id="mail" placeholder="Correo Electrónico" required>
                         </div>
                         <div class="mb-2">
-                            <input type="email" name="mail" class="form-control" id="correo" placeholder="Correo Electrónico" required>
+                            <input type="number" name="celular" class="form-control form-input" id="phone" placeholder="Número de Celular" required>
                         </div>
-                        <div class="mb-2">
-                            <input type="text" name="phone" class="form-control" id="teléfono" placeholder="Número de Teléfono" pattern="^(0[1-9][1-9])\s\d{6,8}$|^(0[1-9][1-9][1-9])\s\d{8}$" required>
-                        </div>
-                        <legend>¿Por qué nos contactas?</legend>
+                        <legend class="motivo-contacto">¿Por qué nos contactas?</legend>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="motivo" id="consulta" checked>
-                            <label class="form-check-label" for="consulta">Solicitud de Entrevista Virtual</label>
+                            <label class="form-check-label reason" for="consulta">Solicitud de Entrevista Virtual</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="motivo" id="presupuesto">
-                            <label class="form-check-label" for="presupuesto">Otra Consulta</label>
+                            <label class="form-check-label reason" for="presupuesto">Otra Consulta</label>
                         </div>
-                        <div class="form-floating my-3">
-                            <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Deje su mensaje. En caso de solicitar una Entrevista, indique su preferencia horaria</label>
+                        <div class="form-floating my-2">
+                            <textarea class="form-control" name="mensaje" id="textArea" style="height: 100px" placeholder="Deje su mensaje. En caso de solicitar una Entrevista, indique su preferencia horaria" required></textarea>
                         </div>
-                        <button class="py-2 px-3 mt-1 btn primaty-btn button" type="submit">
-                            <a href="error404.html">Enviar</a>
+                        <button class="py-2 px-3 mt-1 btn button" type="submit">
+                            <a href="#">Enviar</a>
                         </button>
                     </form>
                 </section>
                 <section id="Datos" class="container-fluid my-2">
-                    <h3 class="py-3">O visitanos en Nuestro Consultorio</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.6523334381454!2d-58.4167884!3d-34.5876626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0064739b89%3A0xd0f5a3d846103f1c!2sCONECTAR%20(%20Psicopegagogia%2C%20Fonoaudiologia%2C%20Kinesiologia)!5e0!3m2!1ses-419!2sar!4v1721616511584!5m2!1ses-419!2sar" class="mb-4"></iframe>
-                    <div>
-                        <img src="img/icons/location.svg" alt="ícono de ubicación" class="p-0">
-                        <p>Av. Santa Fe 3329, 6to "A" - Palermo, CABA</p>
+                    <h3 class="pt-3 pb-2">O visitanos en Nuestro Consultorio</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.6523334381454!2d-58.4167884!3d-34.5876626!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0064739b89%3A0xd0f5a3d846103f1c!2sCONECTAR%20(%20Psicopegagogia%2C%20Fonoaudiologia%2C%20Kinesiologia)!5e0!3m2!1ses-419!2sar!4v1721616511584!5m2!1ses-419!2sar" class="mb-3"></iframe>
+                    <div class="mb-2">
+                        <img src="img/icons/location.svg" alt="ícono de ubicación" class="my-auto me-2">
+                        <p class="my-auto">Av. Santa Fe 3329, 6to "A" - Palermo, CABA</p>
                     </div>
                     <div>
-                        <img src="img/icons/whap.svg" alt="ícono de teléfono" class="p-0">
-                        <p>(011) 15 7174 9041</p>
+                        <img src="img/icons/whap.svg" alt="ícono de teléfono" class="my-auto me-2">
+                        <p class="my-auto">(011) 15 7174 9041</p>
                     </div>
                 </section>
             </main>
